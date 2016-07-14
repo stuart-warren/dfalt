@@ -5,7 +5,7 @@ Simple library to use environment vars in golang flag statements or a default va
 ```
 func main() {
      var (
-     	 myVar = flag.String("http", dfalt.EnvString("HTTP_ADDR", ":5050"), "HTTP service address")
+     	 httpAddr = flag.String("http", dfalt.EnvString("HTTP_ADDR", ":5050"), "HTTP service address")
      )
      flag.Parse()
      serve(*httpAddr)
